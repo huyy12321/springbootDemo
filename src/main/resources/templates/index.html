@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+首页
+<h2 th:text="${name}"></h2>
+<input type="text" th:value="${mobile}">
+<table>
+    <tr>
+        <th>
+            信息
+        </th>
+    </tr>
+    <tr th:each=" a : ${list}">
+        <td th:text="${a}"></td>
+    </tr>
+  <!--  @表示当前项目路径-->
+    <img th:src="@{/img/下载.jpg}"/>
+</table>
+</body>
+</html>
